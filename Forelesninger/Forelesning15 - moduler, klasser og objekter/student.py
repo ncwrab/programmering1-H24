@@ -12,6 +12,11 @@ class Student:
         self.student_id = student_id
         self.courses = []
 
+    # Vi lager en metode (funksjon som tilhører en klasse) for å returnere fornavn og etternavn tilhørende et objekt av Student-klassen
+    # Denne metoden (funksjonen) kan kun brukes på Student-objekter
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
 # Instansierer to objekter av Student-klassen. De 4 parameterne vi laget selv må fylles ut ved opprettelsen.
 nils_nilsen = Student("Nils", "Nilsen", 22, "IT345")
 anne_annesen = Student("Anne", "Annesen", 23, "IT678")
@@ -19,6 +24,8 @@ anne_annesen = Student("Anne", "Annesen", 23, "IT678")
 # Skriver ut litt informasjon fra de to forskjellige objektene.
 print(f"{nils_nilsen.first_name} {nils_nilsen.last_name} er {nils_nilsen.age} år.")
 print(f"{anne_annesen.first_name} {anne_annesen.last_name} er {anne_annesen.age} år.")
-
+# Prøver metoden vi definerte for Student-klassen og ser at den fungerer som forventet.
+print(nils_nilsen.get_full_name())
+print(anne_annesen.get_full_name())
 
 # To be continued..
